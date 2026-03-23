@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import ResetPassword from "./pages/ResetPassword";
-import OtpVerification from "./pages/OtpVerification";
+import Login from "./pages/login/Login"
+import Signup from "./pages/signup/Signup";
+import ResetPassword from "./pages/forgetpass/ResetPassword";
+import OtpVerification from "./pages/forgetpass/OtpVerification";
 
 function App() {
   return (

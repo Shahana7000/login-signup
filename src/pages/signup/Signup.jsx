@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { User, Mail, EyeOff } from "lucide-react";
-import AuthLayout from "../components/AuthLayout";
-import UnderlineInput from "../components/UnderlineInput";
-import PrimaryButton from "../components/PrimaryButton";
+import AuthLayout from "../../components/layout/AuthLayout"
+import UnderlineInput from "../../components/UnderlineInput";
+import PrimaryButton from "../../components/PrimaryButton";
 
 export default function Signup() {
   return (
     <AuthLayout>
       <div className="text-center mb-8">
-        <h1 className="text-[22px] font-bold text-[#1a1c1e]">Welcome to Infliuence</h1>
+        <h3 className="text-[22px] font-bold text-[#1a1c1e]">Welcome to Infliuence</h3>
         <p className="text-[13px] text-gray-400 font-medium mt-1">Signup to your Account</p>
       </div>
 
@@ -37,7 +37,7 @@ export default function Signup() {
         </div>
 
         <div className="pt-2">
-          <PrimaryButton>Signup</PrimaryButton>
+          <PrimaryButton className="rounded-none">Signup</PrimaryButton>
         </div>
 
         <div className="flex gap-4 pt-4">

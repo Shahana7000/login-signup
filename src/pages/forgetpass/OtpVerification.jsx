@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthLayout from "../components/AuthLayout";
-import PrimaryButton from "../components/PrimaryButton";
-import { Input } from "../components/ui/input";
-
+import AuthLayout from "../../components/layout/AuthLayout";
+import PrimaryButton from "../../components/PrimaryButton";
+import { Input } from "../../components/ui/input";
 export default function OtpVerification() {
   return (
     <AuthLayout>
       <div className="text-center mb-8">
-        <h1 className="text-[26px] font-bold text-[#1a1c1e] tracking-tight">Check Your Email</h1>
+        <h3 className="text-[26px] font-bold text-[#1a1c1e] tracking-tight">Check Your Email</h3>
         <p className="text-sm text-gray-400 font-medium mt-4 leading-relaxed max-w-[280px] mx-auto">
           Please enter the four digit Verification Code we sent to <span className="text-black">Example@gmail.com</span>
         </p>
@@ -37,7 +36,7 @@ export default function OtpVerification() {
         <div className="pt-4 pb-2">
           {/* Navigate back to Login after confirmation */}
           <Link to="/" className="block w-full">
-            <PrimaryButton>Comfirm</PrimaryButton>
+            <PrimaryButton className="rounded-none">Comfirm</PrimaryButton>
           </Link>
         </div>
       </div>

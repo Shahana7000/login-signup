@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { EyeOff } from "lucide-react";
-import AuthLayout from "../components/AuthLayout";
-import UnderlineInput from "../components/UnderlineInput";
-import PrimaryButton from "../components/PrimaryButton";
+import AuthLayout from "../../components/layout/AuthLayout"
+import UnderlineInput from "../../components/UnderlineInput";
+import PrimaryButton from "../../components/PrimaryButton";
 
 export default function ResetPassword() {
   return (
     <AuthLayout>
       <div className="text-center mb-10">
-        <h1 className="text-[22px] font-bold text-[#1a1c1e]">Welcome to Infliuence</h1>
+        <h3 className="text-[22px] font-bold text-[#1a1c1e]">Welcome to Infliuence</h3>
         <p className="text-[13px] text-gray-400 font-medium mt-1">Reset Password</p>
       </div>
 
@@ -34,7 +34,7 @@ export default function ResetPassword() {
         <div className="pt-2">
           {/* Navigate to OTP verification instead of submit logic */}
           <Link to="/otp-verification" className="block w-full">
-            <PrimaryButton>Save Password</PrimaryButton>
+            <PrimaryButton className="rounded-none">Save Password</PrimaryButton>
           </Link>
         </div>
       </div>
