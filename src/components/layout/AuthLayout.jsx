@@ -6,7 +6,7 @@ export function AuthLayout({ children }) {
   // Even if the file doesn't exist yet, it won't break the build; just renders white or transparent bg.
   return (
     <div
-      className="min-h-screen w-full flex items-center justify-center bg-cover bg-center bg-[#fdfaf2] relative"
+      className="min-h-screen flex items-center justify-center bg-cover bg-center bg-[#fdfaf2] relative"
       style={{
         backgroundImage: 'url("/src/assets/bg.png")',
       }}

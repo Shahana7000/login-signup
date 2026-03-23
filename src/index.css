@@ -260,3 +260,8 @@ code {
     @apply bg-background text-foreground;}
   html {
     @apply font-sans;}}
+
+
+body{
+  background-color: #FDF5DF;
+}    
