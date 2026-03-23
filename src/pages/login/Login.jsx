@@ -1,108 +1,68 @@
-import React, { useState } from 'react';
-import { Mail, Eye, EyeOff } from 'lucide-react';
-import AuthLayout from '../../components/AuthLayout';
-import Logo from '../../components/Logo';
-import RecaptchaLogo from '../../assets/RecaptchaLogo 1.png';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
-import { Label } from '../../components/ui/label';
-import { Card, CardContent } from '../../components/ui/card';
+import React from 'react';
+import { Mail, EyeOff } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import UnderlineInput from '../../components/Reusable/UnderlineInput'
+import PrimaryButton from '../../components/Reusable/PrimaryButton';
+import RecaptchaLogo from "../../assets/RecaptchaLogo.png"
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <AuthLayout>
-      <Card className="w-full max-w-[480px] p-6 lg:p-10 shadow-2xl">
-        <CardContent className="w-full flex flex-col items-center">
-          {/* Logo */}
-          <Logo />
+    <>
+      {/* Heading */}
+      <div className="text-center mb-4 sm:mb-5">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Welcome to Infliuence</h3>
+        <p className="text-gray-400 text-xs sm:text-sm font-medium mt-1">Login to your Account</p>
+      </div>
 
-          {/* Welcome Text */}
-          <div className="text-center mb-8">
-            <h1 className="text-[32px] font-bold text-gray-900 mb-1 font-sans">
-              Welcome to Infliuence
-            </h1>
-            <p className="text-gray-400 text-base font-medium font-sans">
-              Login to your Account
-            </p>
-          </div>
+      {/* Form */}
+      <div className="space-y-3 sm:space-y-4">
+        {/* Email */}
+        <UnderlineInput
+          label="Email ID"
+          type="email"
+          placeholder="Enter Your Email Address"
+          icon={Mail}
+        />
 
-          <form className="w-full space-y-6">
-            {/* Email Field */}
-            <div className="space-y-1 relative">
-              <Label className="text-gray-700 font-medium ml-1">Email ID</Label>
-              <div className="relative">
-                <Input
-                  type="email"
-                  placeholder="name@company.com"
-                  className="border-0 border-b-2 border-gray-100 rounded-none px-0 py-2 focus-visible:ring-0 focus-visible:border-gray-300 transition-all placeholder:text-gray-300 text-gray-900 h-10 pr-8"
-                />
-                <Mail className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-              </div>
-            </div>
-
-            {/* Password Field */}
-            <div className="space-y-1 relative">
-              <Label className="text-gray-700 font-medium ml-1">Password</Label>
-              <div className="relative">
-                <Input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="**********"
-                  className="border-0 border-b-2 border-gray-100 rounded-none px-0 py-2 focus-visible:ring-0 focus-visible:border-gray-300 transition-all placeholder:text-gray-300 text-gray-900 h-10 pr-8 text-xl"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                </button>
-              </div>
-              <div className="flex justify-end mt-1">
-                <Link to="/forget-password" title="Forget Password?" className="text-gray-400 text-xs font-medium hover:text-[#F5A623] transition-colors">
-                  Forgot Password?
-                </Link>
-              </div>
-            </div>
-
-            {/* reCAPTCHA Placeholder */}
-            <div className="flex items-center justify-between bg-gray-50/50 p-4 rounded-xl border border-gray-100 w-full mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-7 h-7 border-2 border-gray-300 rounded-sm bg-white cursor-pointer hover:border-[#4285F4] transition-colors"></div>
-                <span className="text-sm text-gray-700 font-medium">I'm not a robot</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <img src={RecaptchaLogo} alt="reCAPTCHA" className="w-7 h-7" />
-                <span className="text-[8px] text-gray-400 font-bold">reCAPTCHA</span>
-                <div className="flex gap-1 text-[7px] text-gray-400 mt-0.5">
-                  <span>Privacy</span>
-                  <span>•</span>
-                  <span>Terms</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Login Button */}
-            <Button
-              className="w-full h-14 bg-[#F5A623] hover:bg-[#E59512] text-white font-bold text-lg rounded-xl shadow-lg transition-all duration-300"
+        {/* Password — same UnderlineInput as Email */}
+        <div>
+          <UnderlineInput label="Password" type="password" icon={EyeOff} placeholder="Enter Your Password" />
+          <div className="flex justify-end -mt-1">
+            <Link
+              to="/forget-password"
+              className="text-gray-400 text-[10px] sm:text-xs hover:text-[#F5A623] transition-colors"
             >
-              Login
-            </Button>
-          </form>
-
-          {/* Signup Link */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-400 text-sm font-medium">
-              Not registered yet?{' '}
-              <Link to="/signup" className="text-[#F5A623] hover:underline transition-all">
-                Signup here
-              </Link>
-            </p>
+              Forgot Password?
+            </Link>
           </div>
-        </CardContent>
-      </Card>
-    </AuthLayout>
+        </div>
+
+        {/* reCAPTCHA placeholder */}
+        <div className="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-lg px-3 sm:px-4 py-2 sm:py-2.5">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-gray-300 rounded-sm bg-white" />
+            <span className="text-xs sm:text-sm text-gray-600 font-medium">I'm not a robot</span>
+          </div>
+          <div className="flex flex-col items-center gap-0.5 h-10 w-7">
+            <img src={RecaptchaLogo} alt="reCAPTCHA" className="w-5 h-5 sm:w-7 sm:h-7 object-contain" />
+            <span className="text-[6px] sm:text-[8px] text-gray-400 font-bold">reCAPTCHA</span>
+            <span className="text-[5px] sm:text-[7px] text-gray-300">Privacy · Terms</span>
+          </div>
+        </div>
+
+        {/* Login Button */}
+        <PrimaryButton className="rounded-sm">Login</PrimaryButton>
+      </div>
+
+      {/* Footer */}
+      <p className="text-center text-gray-400 text-[10px] sm:text-xs md:text-sm mt-3 sm:mt-4">
+        Not registered yet?{' '}
+        <Link to="/signup" className="text-[#F5A623] hover:underline font-medium">
+          Signup here
+        </Link>
+      </p>
+    </>
   );
 };
 
