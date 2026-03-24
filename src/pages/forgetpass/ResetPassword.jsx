@@ -7,7 +7,7 @@ import AuthCard from "../../components/Auth/AuthCard";
 
 export default function ResetPassword() {
   return (
-    <AuthCard cardClassName="md:h-[420px]">
+    <AuthCard cardClassName="md:h-[460px]">
       <div className="flex flex-col space-y-4 sm:space-y-6">
         {/* Heading */}
         <div className="text-center">

@@ -7,7 +7,7 @@ import AuthCard from "../../components/Auth/AuthCard";
 
 export default function VerifyAccount() {
   return (
-    <AuthCard cardClassName="md:h-[440px]">
+    <AuthCard cardClassName="md:h-[480px]">
       <div className="flex flex-col space-y-4 sm:space-y-6">
         {/* Heading */}
         <div className="text-center">

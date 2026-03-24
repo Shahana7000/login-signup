@@ -14,7 +14,7 @@ const handleChange = (value, index) => {
   setOtp(newOtp);
 };
   return (
-    <AuthCard cardClassName="md:h-[480px]">
+    <AuthCard cardClassName="md:h-[520px]">
       <div className="flex flex-col space-y-4 sm:space-y-6">
         <div className="text-center">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#1a1c1e] font-quicksand">Check Your Email</h3>

@@ -19,8 +19,8 @@ const AuthCard = ({ children, cardClassName }) => {
             <Logo />
           </div>
 
-          {/* Form Content — centered in remaining space */}
-          <div className="flex-1 flex flex-col justify-center">
+          {/* Form Content — Constant margin after Logo to match Signup */}
+          <div className="mt-4 sm:mt-6 md:mt-8">
             {children}
           </div>
         </CardContent>
