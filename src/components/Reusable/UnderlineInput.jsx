@@ -18,9 +18,9 @@ export function UnderlineInput({
   const currentType = isPasswordType ? (showPassword ? "text" : "password") : type;
   const DisplayIcon = isPasswordType ? (showPassword ? Eye : EyeOff) : Icon;
   return (
-    <div className={cn("flex flex-col space-y-1.5 sm:space-y-2 relative pb-1 sm:pb-2", className)}>
+    <div className={cn("flex flex-col space-y-0 relative pb-0.5 sm:pb-1", className)}>
       {label && (
-        <Label className="text-xs sm:text-sm font-semibold text-gray-800">{label}</Label>
+        <Label className="text-xs sm:text-sm font-semibold text-[#231F20]-500 font-quicksand">{label}</Label>
       )}
       <div className="relative">
         <Input
@@ -28,7 +28,7 @@ export function UnderlineInput({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className="bg-transparent border-0 border-b border-gray-300 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-[#F5A623] text-gray-700 text-sm h-7 sm:h-8"
+          className="bg-transparent border-0 border-b border-gray-300 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-[#F5A623] text-gray-700 text-sm h-6 sm:h-7"
         />
         {DisplayIcon && (
           <div 
