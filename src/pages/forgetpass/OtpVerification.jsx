@@ -14,7 +14,7 @@ const handleChange = (value, index) => {
   setOtp(newOtp);
 };
   return (
-    <AuthCard cardClassName="md:h-[520px]">
+    <AuthCard cardClassName="md:h-[480px]">
       <div className="flex flex-col space-y-4 sm:space-y-6">
         <div className="text-center">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#1a1c1e] font-quicksand">Check Your Email</h3>
@@ -44,14 +44,14 @@ const handleChange = (value, index) => {
             Didn't Receive Code? <span className="font-bold text-gray-800 cursor-pointer hover:underline">Resend Code</span>
           </p>
           <p className="text-[10px] sm:text-xs text-gray-400">
-            Resend Code in ? <span className="font-semibold text-gray-800 font-bold">00:59</span>
+            Resend Code in ? <span className="font-bold text-gray-800 font-bold">00:59</span>
           </p>
         </div>
 
         {/* Confirm Button */}
         <div>
           <Link to="/reset-password" className="block w-full">
-            <PrimaryButton className="rounded font-comfortaa">Confirm</PrimaryButton>
+            <PrimaryButton className="rounded font-comfortaa py-3">Confirm</PrimaryButton>
           </Link>
         </div>
       </div>

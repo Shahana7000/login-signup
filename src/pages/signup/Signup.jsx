@@ -24,7 +24,7 @@ const Signup = () => {
           {/* Password */}
           <div>
             <UnderlineInput label="Password" type="password" placeholder="Enter Password" icon={EyeOff} />
-            <p className="text-gray-400 text-left text-[10px] sm:text-[9px] mt-0.5">Must be atleast 8 characters.</p>
+            <p className="text-[#4E4E4E] text-left text-[14px] sm:text-[12px] mt-0.5">Must be atleast 8 characters.</p>
           </div>
 
           {/* Signup Button */}
@@ -34,34 +34,31 @@ const Signup = () => {
 
           {/* Social Buttons */}
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-3">
+
             <button
               type="button"
-              className="flex-1 relative flex items-center justify-center bg-black text-white text-[8px] sm:text-[10px] font-bold font-comfortaa h-8 sm:h-9 rounded hover:bg-gray-900 transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 bg-black text-white text-[8px] sm:text-[10px] font-bold font-comfortaa h-8 sm:h-9 rounded hover:bg-gray-900 transition-colors"
             >
-              <span className="absolute left-2 flex items-center justify-center shrink-0">
-                <img src={GoogleImg} alt="Google" className="w-3 h-3 sm:w-4 sm:h-4" />
-              </span>
-              Signup with Google
+              <img src={GoogleImg} alt="Google" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span>Signup with Google</span>
             </button>
             <button
               type="button"
-              className="flex-1 relative flex items-center justify-center bg-black text-white text-[8px] sm:text-[10px] font-bold font-comfortaa h-8 sm:h-9 rounded hover:bg-gray-900 transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 bg-black text-white text-[8px] sm:text-[10px] font-bold font-comfortaa h-8 sm:h-9 rounded hover:bg-gray-900 transition-colors"
             >
-              <span className="absolute left-2 flex items-center justify-center shrink-0">
-                <img src={FacebookImg} alt="Facebook" className="w-3 h-3 sm:w-4 sm:h-4 " />
-              </span>
-              Signup with Facebook
+              <img src={FacebookImg} alt="Facebook" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span>Signup with Facebook</span>
             </button>
           </div>
         </div>
 
         {/* Footer */}
-       <p className="text-center text-gray-500 text-[10px] sm:text-xs md:text-xs m-2! pb-2 font-quicksand font-normal">
-  Already have account ?{' '}
-  <Link to="/" className="text-[#F5A623] hover:underline font-medium font-quicksand">
-    Login here
-  </Link>
-</p>
+        <p className="text-center text-gray-500 text-[10px] sm:text-xs md:text-xs m-2! pb-2 font-quicksand font-normal">
+          Already have account ?{' '}
+          <Link to="/" className="text-[#F5A623] hover:underline font-medium font-quicksand">
+            Login here
+          </Link>
+        </p>
       </div>
     </AuthCard>
   );

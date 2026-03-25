@@ -7,7 +7,7 @@ import AuthCard from "../../components/Auth/AuthCard"
 
 const ForgetPassword = () => {
   return (
-    <AuthCard cardClassName="md:h-[420px]">
+    <AuthCard cardClassName="md:h-[400px]">
       <div className="flex flex-col space-y-4 sm:space-y-6">
         {/* Heading */}
         <div className="text-center">
