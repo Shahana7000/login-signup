@@ -14,7 +14,7 @@ const handleChange = (value, index) => {
   setOtp(newOtp);
 };
   return (
-    <AuthCard cardClassName="md:h-[480px]">
+    <AuthCard>
       <div className="flex flex-col space-y-4 sm:space-y-6">
         <div className="text-center">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#1a1c1e] font-quicksand">Check Your Email</h3>
@@ -39,19 +39,19 @@ const handleChange = (value, index) => {
         </div>
 
         {/* Resend Section */}
-        <div className="text-center space-y-2 font-quicksand">
-          <p className="text-[10px] sm:text-xs md:text-sm text-gray-500">
+        <div className="text-center space-y-3 font-quicksand pt-2">
+          <p className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-500">
             Didn't Receive Code? <span className="font-bold text-gray-800 cursor-pointer hover:underline">Resend Code</span>
           </p>
-          <p className="text-[10px] sm:text-xs text-gray-400">
-            Resend Code in ? <span className="font-bold text-gray-800 font-bold">00:59</span>
+          <p className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-400">
+            Resend Code in ? <span className="font-bold text-gray-800">00:59</span>
           </p>
         </div>
 
         {/* Confirm Button */}
-        <div>
+        <div className="pt-1">
           <Link to="/reset-password" className="block w-full">
-            <PrimaryButton className="rounded font-comfortaa py-3">Confirm</PrimaryButton>
+            <PrimaryButton className="rounded font-comfortaa py-3.5 sm:py-4">Confirm</PrimaryButton>
           </Link>
         </div>
       </div>

@@ -29,12 +29,11 @@ const Signup = () => {
 
           {/* Signup Button */}
           <div className="pt-0.5">
-            <PrimaryButton className="rounded font-comfortaa py-2 sm:py-2.5">Signup</PrimaryButton>
+            <PrimaryButton className="rounded font-comfortaa py-3.5 sm:py-4">Signup</PrimaryButton>
           </div>
 
           {/* Social Buttons */}
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-3">
-
             <button
               type="button"
               className="flex-1 flex items-center justify-center gap-2 bg-black text-white text-[8px] sm:text-[10px] font-bold font-comfortaa h-8 sm:h-9 rounded hover:bg-gray-900 transition-colors"
@@ -53,7 +52,7 @@ const Signup = () => {
         </div>
 
         {/* Footer */}
-        <p className="text-center text-gray-500 text-[10px] sm:text-xs md:text-xs m-2! pb-2 font-quicksand font-normal">
+        <p className="text-center text-gray-500 text-[9px] sm:text-[10px] md:text-[11px] m-2! pb-2 font-quicksand font-normal">
           Already have account ?{' '}
           <Link to="/" className="text-[#F5A623] hover:underline font-medium font-quicksand">
             Login here

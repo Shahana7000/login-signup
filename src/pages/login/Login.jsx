@@ -42,12 +42,12 @@ const Login = () => {
           </div>
 
           <div className="pt-1">
-            <PrimaryButton className="rounded font-comfortaa">Login</PrimaryButton>
+            <PrimaryButton className="rounded font-comfortaa py-3.5 sm:py-4">Login</PrimaryButton>
           </div>
         </div>
 
         {/* Footer */}
-        <p className="text-center text-gray-500 text-[10px] sm:text-xs md:text-xs font-quicksand font-normal m-2!">
+        <p className="text-center text-gray-500 text-[9px] sm:text-[10px] md:text-[11px] font-quicksand font-normal m-2!">
           Not registered yet?{' '}
           <Link to="/signup" className="text-[#F5A623] hover:underline font-medium font-quicksand">
             Signup here

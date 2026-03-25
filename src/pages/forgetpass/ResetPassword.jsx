@@ -7,7 +7,7 @@ import AuthCard from "../../components/Auth/AuthCard";
 
 export default function ResetPassword() {
   return (
-    <AuthCard cardClassName="md:h-[420px]">
+    <AuthCard>
       <div className="flex flex-col space-y-4 sm:space-y-6">
         {/* Heading */}
         <div className="text-center">
@@ -21,12 +21,12 @@ export default function ResetPassword() {
           <UnderlineInput label="Confirm New Password" type="password" placeholder="Confirm Your New Password" icon={EyeOff} />
 
           <Link to="/login" className="block w-full">
-            <PrimaryButton className="rounded font-comfortaa">Save Password</PrimaryButton>
+            <PrimaryButton className="rounded font-comfortaa py-3.5 sm:py-4">Save Password</PrimaryButton>
           </Link>
         </div>
 
         {/* Footer */}
-        <p className="text-center text-gray-400 text-[10px] sm:text-xs md:text-xs font-quicksand">
+        <p className="text-center text-gray-400 text-[9px] sm:text-[10px] md:text-[11px] font-quicksand">
           Already have account ?{" "}
           <Link to="/login" className="text-[#F5A623] hover:underline font-medium font-quicksand">
             Login here

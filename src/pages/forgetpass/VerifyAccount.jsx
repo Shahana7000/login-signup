@@ -7,7 +7,7 @@ import AuthCard from "../../components/Auth/AuthCard";
 
 export default function VerifyAccount() {
   return (
-    <AuthCard cardClassName="md:h-[440px]">
+    <AuthCard>
       <div className="flex flex-col space-y-4 sm:space-y-6">
         {/* Heading */}
         <div className="text-center">
@@ -16,7 +16,7 @@ export default function VerifyAccount() {
         </div>
 
         {/* Form */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           <UnderlineInput
             label="Email or Phone number"
             placeholder="Enter Your Email or Phone Number"
@@ -24,17 +24,17 @@ export default function VerifyAccount() {
           />
 
           {/* Resend Section */}
-          <div className="text-center space-y-2 font-quicksand">
-            <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 font-medium font-quicksand">
+          <div className="text-center space-y-3 font-quicksand">
+            <p className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-500 font-medium whitespace-nowrap">
               Didn't Receive Code? <span className="font-bold text-gray-800 cursor-pointer hover:underline">Resend Code</span>
             </p>
-            <p className="text-[10px] sm:text-xs text-gray-400">
+            <p className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-400">
               Resend Code in ? <span className="text-gray-800 font-bold">00:59</span>
             </p>
           </div>
 
           <Link to="/otp-verification" className="block w-full">
-            <PrimaryButton className="rounded font-comfortaa">Verify Account</PrimaryButton>
+            <PrimaryButton className="rounded font-comfortaa py-3.5 sm:py-4">Verify Account</PrimaryButton>
           </Link>
         </div>
       </div>
