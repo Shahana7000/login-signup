@@ -8,12 +8,13 @@ import AuthCard from '../../components/Auth/AuthCard';
 const Login = () => {
   return (
     <AuthCard>
-      <div className="flex flex-col space-y-4 sm:space-y-6">
-        {/* Heading */}
-        <div className="text-center">
-          <h3 className="text-base sm:text-lg md:text-xl font-medium text-gray-900 font-ubuntu">Welcome to Infliuence</h3>
-          <p className="text-gray-400 text-[10px] sm:text-xs font-medium mt-0.5 font-ubuntu">Login to your Account</p>
-        </div>
+      <div className="flex flex-col space-y-2 sm:space-y-3">
+        <div className="space-y-4 sm:space-y-6">
+          {/* Heading */}
+          <div className="text-center">
+            <h3 className="text-base sm:text-lg md:text-xl font-medium text-black-500 font-ubuntu">Welcome to Infliuence</h3>
+            <p className="text-gray-500 text-[10px] sm:text-xs font-medium mt-0.5 font-ubuntu">Login to your Account</p>
+          </div>
 
         {/* Form */}
         <div className="space-y-3 sm:space-y-4">
@@ -25,11 +26,11 @@ const Login = () => {
           />
 
           <div>
-            <UnderlineInput 
-              label="Password" 
-              type="password" 
-              icon={EyeOff} 
-              placeholder="Enter Your Password" 
+            <UnderlineInput
+              label="Password"
+              type="password"
+              icon={EyeOff}
+              placeholder="Enter Your Password"
             />
             <div className="flex justify-end mt-1.5">
               <Link
@@ -45,15 +46,16 @@ const Login = () => {
             <PrimaryButton className="rounded font-comfortaa py-3.5 sm:py-4">Login</PrimaryButton>
           </div>
         </div>
+        </div>
 
         {/* Footer */}
-        <p className="text-center text-gray-500 text-[9px] sm:text-[10px] md:text-[11px] font-quicksand font-normal m-2!">
+        <p className="text-center text-[#2F2F2F]-500 text-[9px] sm:text-[10px] md:text-[11px] font-quicksand font-normal mt-1 sm:mt-2">
           Not registered yet?{' '}
           <Link to="/signup" className="text-[#F5A623] hover:underline font-medium font-quicksand">
             Signup here
           </Link>
         </p>
-      </div>
+    </div>
     </AuthCard>
   );
 };

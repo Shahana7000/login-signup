@@ -20,7 +20,7 @@ export function UnderlineInput({
   return (
     <div className={cn("flex flex-col space-y-0 relative pb-0.5 sm:pb-1", className)}>
       {label && (
-        <Label className="text-[10px] sm:text-xs font-semibold text-[#231F20]-500 font-quicksand">{label}</Label>
+        <Label className="text-[14px]! sm:text-xs font-semibold text-[#231F20]-500 font-quicksand">{label}</Label>
       )}
       <div className="relative">
         <Input
@@ -28,7 +28,7 @@ export function UnderlineInput({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className="bg-transparent border-0 border-b border-gray-300 placeholder:text-[8px] sm:placeholder:text-[10px] md:placeholder:text-[12px] rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-[#F5A623] text-gray-700 text-sm h-6 sm:h-7"
+          className="bg-transparent border-0 border-b border-gray-300 placeholder:text-[11px]! sm:placeholder:text-[10px] md:placeholder:text-[12px] rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-[#F5A623] text-gray-700 text-sm h-6 sm:h-7"
         />
         {DisplayIcon && (
           <div 
@@ -38,7 +38,7 @@ export function UnderlineInput({
             )}
             onClick={isPasswordType ? () => setShowPassword(!showPassword) : undefined}
           >
-            <DisplayIcon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+            <DisplayIcon className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
           </div>
         )}
       </div>

@@ -5,6 +5,7 @@ import { cn } from "../../lib/utils";
 import Logo from '../Reusable/Logo';
 import AuthBackground from "../Auth/AuthBackground"
 
+
 const AuthCard = ({ children, cardClassName }) => {
   return (
     <div className="min-h-screen w-full relative overflow-x-hidden overflow-y-auto flex items-center justify-center font-sans py-8 sm:py-12 bg-gray-50/20">
@@ -17,7 +18,7 @@ const AuthCard = ({ children, cardClassName }) => {
         <Card className={cn("bg-white flex flex-col", cardClassName)}>
           <CardContent className="flex-1">
             {/* Logo — constant top position */}
-            <div className="flex justify-center mb-0 mt-2 sm:mt-4">
+            <div className="flex justify-center mb-0 mt-4 sm:mt-5 md:mt-6">
               <Logo />
             </div>
 

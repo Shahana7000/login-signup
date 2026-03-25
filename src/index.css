@@ -189,3 +189,10 @@ code {
 body{
   background-color: #FDF5DF;
 }    
+
+/* in index.css */
+@media (min-width: 1024px) {
+  .auth-scale {
+    zoom: 0.85; /* 85% of actual size */
+  }
+}

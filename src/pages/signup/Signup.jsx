@@ -10,12 +10,13 @@ import FacebookImg from '../../assets/facebook.png';
 const Signup = () => {
   return (
     <AuthCard>
-      <div className="flex flex-col space-y-3 sm:space-y-4">
-        {/* Heading */}
-        <div className="text-center">
-          <h3 className="text-base sm:text-lg md:text-xl font-medium text-gray-900 font-ubuntu">Welcome to Infliuence</h3>
-          <p className="text-gray-400 text-[10px] sm:text-xs font-medium mt-0.5 font-ubuntu">Signup to your Account</p>
-        </div>
+      <div className="flex flex-col space-y-2 sm:space-y-3">
+        <div className="space-y-3 sm:space-y-4">
+          {/* Heading */}
+          <div className="text-center">
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black-600 font-quicksand">Welcome to Infliuence</h3>
+            <p className="text-gray-400 text-[10px] sm:text-xs font-medium mt-0.5 font-quicksand">Signup to your Account</p>
+          </div>
         {/* Form */}
         <div className="space-y-2">
           <UnderlineInput label="Name" type="text" placeholder="Enter Name" icon={User} />
@@ -33,7 +34,7 @@ const Signup = () => {
           </div>
 
           {/* Social Buttons */}
-          <div className="flex flex-col sm:flex-row gap-1 sm:gap-3">
+          <div className="flex flex-col sm:flex-row gap-2! sm:gap-3">
             <button
               type="button"
               className="flex-1 flex items-center justify-center gap-2 bg-black text-white text-[8px] sm:text-[10px] font-bold font-comfortaa h-8 sm:h-9 rounded hover:bg-gray-900 transition-colors"
@@ -50,9 +51,10 @@ const Signup = () => {
             </button>
           </div>
         </div>
+        </div>
 
         {/* Footer */}
-        <p className="text-center text-gray-500 text-[9px] sm:text-[10px] md:text-[11px] m-2! pb-2 font-quicksand font-normal">
+        <p className="text-center text-[#2F2F2F]-500 text-[9px] sm:text-[10px] md:text-[11px] mt-5! sm:mt-6 font-quicksand font-normal">
           Already have account ?{' '}
           <Link to="/" className="text-[#F5A623] hover:underline font-medium font-quicksand">
             Login here
